@@ -1,0 +1,3 @@
+#!/bin/bash
+rm -f *.mpg
+cat $(ls -1v *.jpg) | ffmpeg -r 30 -f image2pipe -c:v mjpeg -i - video.mpg
